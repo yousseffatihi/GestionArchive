@@ -1,0 +1,9 @@
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\Dapper.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\QueryBuilder.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\SqlKata.Execution.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\Dapper.xml
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

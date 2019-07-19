@@ -1,0 +1,12 @@
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\GestionArchive.exe.config
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\GestionArchive.exe
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\GestionArchive.pdb
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\ClassLibrary1.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\QueryBuilder.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\SqlKata.Execution.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\ClassLibrary1.pdb
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csprojResolveAssemblyReference.cache
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.Properties.Resources.resources
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csproj.GenerateResource.Cache
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.exe
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb

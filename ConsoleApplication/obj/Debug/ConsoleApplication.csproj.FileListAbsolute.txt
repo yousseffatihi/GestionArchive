@@ -1,0 +1,10 @@
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary1.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\QueryBuilder.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\SqlKata.Execution.dll
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary1.pdb
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
