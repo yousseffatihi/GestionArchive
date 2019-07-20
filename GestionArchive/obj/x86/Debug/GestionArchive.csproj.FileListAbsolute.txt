@@ -10,3 +10,19 @@ C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csproj.GenerateResource.Cache
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.exe
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\GestionArchive.exe.config
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\GestionArchive.exe
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\GestionArchive.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\QueryBuilder.dll
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\SqlKata.Execution.dll
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\Dapper.dll
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\Dapper.xml
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csprojResolveAssemblyReference.cache
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.Properties.Resources.resources
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csproj.GenerateResource.cache
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csproj.CoreCompileInputs.cache
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.csproj.CopyComplete
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.exe
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\ClassLibrary.dll
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\ClassLibrary.pdb

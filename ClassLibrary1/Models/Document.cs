@@ -3,22 +3,38 @@ using System.Collections.Generic;
 
 namespace Models {
 	public class Document {
+        /// <summary>
+        /// Attributes
+        /// </summary>
 		private int idDocument;
-		private System.Collections.Generic.List<string> fichPath;
-		private System.Collections.Generic.List<string> typeDocument;
+		private string fichPath;
+		private string typeDocument;
 
+        /// <summary>
+        /// Associations
+        /// </summary>
 		private Etudiant etudiant;
 
-        public Document(int idDocument)
-        {
-            this.idDocument = idDocument;
-        }
-
-        public Document(int idDocument, List<string> fichPath, List<string> typeDocument, Etudiant etudiant)
+        /// <summary>
+        /// Default Contructor
+        /// </summary>
+        /// <param name="idDocument"></param>
+        public Document(int idDocument, string fichPath, string typeDocument)
         {
             this.idDocument = idDocument;
             this.fichPath = fichPath;
             this.typeDocument = typeDocument;
+        }
+
+        /// <summary>
+        /// This Contructor is made to initialize all attributes and associations
+        /// </summary>
+        /// <param name="idDocument"></param>
+        /// <param name="fichPath"></param>
+        /// <param name="typeDocument"></param>
+        /// <param name="etudiant"></param>
+        public Document(int idDocument, string fichPath, string typeDocument, Etudiant etudiant) : this(idDocument, fichPath, typeDocument)
+        {
             this.etudiant = etudiant;
         }
 
@@ -28,13 +44,13 @@ namespace Models {
             set { idDocument = value; }
         }
 
-        public List<string> FichPath
+        public string FichPath
         {
             get { return fichPath; }
             set { fichPath = value; }
         }
 
-        public List<string> TypeDocument
+        public string TypeDocument
         {
             get { return typeDocument; }
             set { typeDocument = value; }
@@ -44,6 +60,11 @@ namespace Models {
         {
             get { return etudiant; }
             set { etudiant = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"Id Document : {idDocument}, fich Path {fichPath}, type Document : {typeDocument}";
         }
     }
 

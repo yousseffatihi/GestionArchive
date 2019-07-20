@@ -3,10 +3,12 @@ using System.Collections.Generic;
 
 namespace Models {
 	public class Etudiant {
+        /// <summary>
+        /// Attributes
+        /// </summary>
 		private int idEtudiant;
 		private string nomEtudiant;
 		private string nomEtudiantArabe;
-
         private string prenomEtudiant;
         private string prenomEtudiantArabe;
         private string cne;
@@ -15,17 +17,38 @@ namespace Models {
         private DateTime dateDeNaissance;
         private DateTime dateInscription;
         private string lieuDeNaissance;
-        private string lienDeNaissanceArabe;
+        private string lieuDeNaissanceArabe;
         private string adresse;
         private string adresseArabe;
         private string numInsricption;
 
-        private System.Collections.Generic.List<Note> notes;
-        private System.Collections.Generic.List<AnneeScolaire> anneesScolaire;
+        /// <summary>
+        /// Associations
+        /// </summary>
+        private List<Note> notes;
+        private List<AnneeScolaire> anneesScolaire;
+        private List<Document> documents;
 
-        private System.Collections.Generic.List<Document> documents;
-
-        public Etudiant(int idEtudiant, string nomEtudiant, string nomEtudiantArabe, string prenomEtudiant, string prenomEtudiantArabe, string cne, string cni, string massar, DateTime dateDeNaissance, DateTime dateInscription, string lieuDeNaissance, string lienDeNaissanceArabe, string adresse, string adresseArabe, string numInsricption)
+        /// <summary>
+        /// Default Contructor
+        /// </summary>
+        /// <param name="idEtudiant"></param>
+        /// <param name="nomEtudiant"></param>
+        /// <param name="nomEtudiantArabe"></param>
+        /// <param name="prenomEtudiant"></param>
+        /// <param name="prenomEtudiantArabe"></param>
+        /// <param name="cne"></param>
+        /// <param name="cni"></param>
+        /// <param name="massar"></param>
+        /// <param name="dateDeNaissance"></param>
+        /// <param name="dateInscription"></param>
+        /// <param name="lieuDeNaissance"></param>
+        /// <param name="lieuDeNaissanceArabe"></param>
+        /// <param name="adresse"></param>
+        /// <param name="adresseArabe"></param>
+        /// <param name="numInsricption"></param>
+        public Etudiant(int idEtudiant, string nomEtudiant, string nomEtudiantArabe, string prenomEtudiant, string prenomEtudiantArabe, string cne, string cni, string massar, 
+            DateTime dateDeNaissance, DateTime dateInscription, string lieuDeNaissance, string lieuDeNaissanceArabe, string adresse, string adresseArabe, string numInsricption)
         {
             this.idEtudiant = idEtudiant;
             this.nomEtudiant = nomEtudiant;
@@ -38,29 +61,38 @@ namespace Models {
             this.dateDeNaissance = dateDeNaissance;
             this.dateInscription = dateInscription;
             this.lieuDeNaissance = lieuDeNaissance;
-            this.lienDeNaissanceArabe = lienDeNaissanceArabe;
+            this.lieuDeNaissanceArabe = lieuDeNaissanceArabe;
             this.adresse = adresse;
             this.adresseArabe = adresseArabe;
             this.numInsricption = numInsricption;
         }
 
-        public Etudiant(int idEtudiant, string nomEtudiant, string nomEtudiantArabe, string prenomEtudiant, string prenomEtudiantArabe, string cne, string cni, string massar, DateTime dateDeNaissance, DateTime dateInscription, string lieuDeNaissance, string lienDeNaissanceArabe, string adresse, string adresseArabe, string numInsricption, List<Note> notes, List<AnneeScolaire> anneesScolaire, List<Document> documents)
+        /// <summary>
+        /// This Contructor is made to initialize all attributes and associations
+        /// </summary>
+        /// <param name="idEtudiant"></param>
+        /// <param name="nomEtudiant"></param>
+        /// <param name="nomEtudiantArabe"></param>
+        /// <param name="prenomEtudiant"></param>
+        /// <param name="prenomEtudiantArabe"></param>
+        /// <param name="cne"></param>
+        /// <param name="cni"></param>
+        /// <param name="massar"></param>
+        /// <param name="dateDeNaissance"></param>
+        /// <param name="dateInscription"></param>
+        /// <param name="lieuDeNaissance"></param>
+        /// <param name="lieuDeNaissanceArabe"></param>
+        /// <param name="adresse"></param>
+        /// <param name="adresseArabe"></param>
+        /// <param name="numInsricption"></param>
+        /// <param name="notes"></param>
+        /// <param name="anneesScolaire"></param>
+        /// <param name="documents"></param>
+        public Etudiant(int idEtudiant, string nomEtudiant, string nomEtudiantArabe, string prenomEtudiant, string prenomEtudiantArabe, string cne, string cni, string massar, 
+            DateTime dateDeNaissance, DateTime dateInscription, string lieuDeNaissance, string lieuDeNaissanceArabe, string adresse, string adresseArabe, string numInsricption, 
+            List<Note> notes, List<AnneeScolaire> anneesScolaire, List<Document> documents) 
+            : this (idEtudiant, nomEtudiant, nomEtudiantArabe, prenomEtudiant, prenomEtudiantArabe, cne, cni, massar, dateDeNaissance, dateInscription, lieuDeNaissance, lieuDeNaissanceArabe, adresse, adresseArabe, numInsricption)
         {
-            this.idEtudiant = idEtudiant;
-            this.nomEtudiant = nomEtudiant;
-            this.nomEtudiantArabe = nomEtudiantArabe;
-            this.prenomEtudiant = prenomEtudiant;
-            this.prenomEtudiantArabe = prenomEtudiantArabe;
-            this.cne = cne;
-            this.cni = cni;
-            this.massar = massar;
-            this.dateDeNaissance = dateDeNaissance;
-            this.dateInscription = dateInscription;
-            this.lieuDeNaissance = lieuDeNaissance;
-            this.lienDeNaissanceArabe = lienDeNaissanceArabe;
-            this.adresse = adresse;
-            this.adresseArabe = adresseArabe;
-            this.numInsricption = numInsricption;
             this.notes = notes;
             this.anneesScolaire = anneesScolaire;
             this.documents = documents;
@@ -134,8 +166,8 @@ namespace Models {
 
         public string LienDeNaissanceArabe
         {
-            get { return lienDeNaissanceArabe; }
-            set { lienDeNaissanceArabe = value; }
+            get { return lieuDeNaissanceArabe; }
+            set { lieuDeNaissanceArabe = value; }
         }
 
         public string Adresse
@@ -173,6 +205,10 @@ namespace Models {
             get { return documents; }
             set { documents = value; }
         }
-    }
 
+        public override string ToString()
+        {
+            return $"Id Etudiant : {idEtudiant}, Nom {NomEtudiant}, Prenom {PrenomEtudiant}, Date Naiss {DateDeNaissance.ToShortDateString()}";
+        }
+    }
 }

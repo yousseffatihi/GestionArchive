@@ -1,52 +1,76 @@
 using System;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
+
 namespace Models {
 	public class AnneeScolaire {
-		private int iD;
-		private string anneeScolaire;
 
+        /// <summary>
+        /// Attributes
+        /// </summary>
+		private int idAnneeScolaire;
+		private string annee;
+
+        /// <summary>
+        /// Associations
+        /// </summary>
 		private Classe classe;
-
 		private Etudiant etudiant;
 
-
-        public AnneeScolaire(int iD, string anneeScolaire)
+        /// <summary>
+        /// Defualt Constructor
+        /// </summary>
+        /// <param name="idAnneeScolaire"></param>
+        /// <param name="annee"></param>
+        public AnneeScolaire(int idAnneeScolaire, string annee)
         {
-            this.iD = iD;
-            this.anneeScolaire = anneeScolaire;
+            this.idAnneeScolaire = idAnneeScolaire;
+            this.annee = annee;
         }
 
-        public AnneeScolaire(int iD, string anneeScolaire, Classe classe, Etudiant etudiant)
+        /// <summary>
+        /// This Contructor is made to initialize all attributes and associations
+        /// </summary>
+        /// <param name="idAnneeScolaire"></param>
+        /// <param name="annee"></param>
+        /// <param name="classe"></param>
+        /// <param name="etudiant"></param>
+        public AnneeScolaire(int idAnneeScolaire, string annee, Classe classe, Etudiant etudiant) : this(idAnneeScolaire, annee)
         {
-            this.iD = iD;
-            this.anneeScolaire = anneeScolaire;
             this.classe = classe;
             this.etudiant = etudiant;
         }
 
-        public int ID
+        [Column(IsPrimaryKey = true, Name = "IdAnneeScolaire")]
+        public int IdAnneeScolaire
         {
-            get { return iD; }
-            set { iD = value; }
+            get { return idAnneeScolaire; }
+            set { idAnneeScolaire = value; }
         }
 
-        public string AnneeScolaire1
+        [Column(Name = "Annee")]
+        public string Annee
         {
-            get { return anneeScolaire; }
-            set { anneeScolaire = value; }
+            get { return annee; }
+            set { annee = value; }
         }
 
+        [Column(Name = "IdClasse")]
         public Classe Classe
         {
             get { return classe; }
             set { classe = value; }
         }
-
+        [Column(Name = "IdEtudiant")]
         public Etudiant Etudiant
         {
             get { return etudiant; }
             set { etudiant = value; }
         }
 
+        public override string ToString()
+        {
+            return $"IdAnneeScolaire : {IdAnneeScolaire}, Annee : {Annee}";
+        }
     }
-
 }

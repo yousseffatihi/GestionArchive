@@ -1,108 +1,118 @@
-﻿using ClassLibrary;
-using Models;
-using SqlKata.Compilers;
-using SqlKata.Execution;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using ClassLibrary;
+using Models;
+using SqlKata.Compilers;
+using SqlKata.Execution;
+
 
 namespace DAO
 {
-    public class ClasseDAO
+    public class NoteDAO
     {
         private SqlConnection connection;
 
-        public ClasseDAO()
+        public NoteDAO()
         {
             connection = Singleton.GetInstance().GetConnection();
         }
 
-        public Classe GetClasse(int idClasse)
+        public Note GetNote(int idNote)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var classe = db.Query("Classe").Where("IdClasse", idClasse).FirstOrDefault<Classe>();
-                return classe;
+                var note = db.Query("Note").Where("IdNote", idNote).FirstOrDefault<Note>();
+                return note;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Get Classe : " + ex.Message);
+                Console.WriteLine("Note DAO Get Note : " + ex.Message);
                 return null;
             }
         }
 
-        public IEnumerable<Classe> GetClasses()
+        public IEnumerable<Note> GetNotes()
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var classes = db.Query("Classe").GetAsync<Classe>().GetAwaiter().GetResult();
-                if (classes.Count() == 0)
+                var notes = db.Query("Note").GetAsync<Note>().GetAwaiter().GetResult();
+                if (notes.Count() == 0)
                     return null;
-                return classes;
+                return notes;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Get Classes : " + ex.Message);
+                Console.WriteLine("Note DAO Get Notes : " + ex.Message);
                 return null;
             }
         }
 
-        public int UpdateClasse(Classe classe)
+        public int UpdateNote(Note note)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Where("IdClasse", classe.IdClasse).Update(new {
-                    classe.NomClasse,
-                    classe.NiveauClasse,
+                var rs = db.Query("Note").Where("IdNote", note.IdNote).Update(new
+                {
+                    note.NomMatiere,
+                    note.NoteMatiere,
+                    note.CoefMatiere,
+                    note.Classe.IdClasse,
+                    note.Etudiant.IdEtudiant
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Update : " + ex.Message);
+                Console.WriteLine("Note DAO Update : " + ex.Message);
                 return 0;
             }
         }
 
-        public int DeleteClasse(int idClasse)
+        public int DeleteNote(int idNote)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Where("IdClasse", idClasse).Delete();
+                var rs = db.Query("Note").Where("IdNote", idNote).Delete();
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Delete : " + ex.Message);
+                Console.WriteLine("Note DAO Delete : " + ex.Message);
                 return 0;
             }
         }
 
-        public int InsertClasse(Classe classe)
+        public int InsertNote(Note note)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Insert(new {
-                    classe.NomClasse,
-                    classe.NiveauClasse,
+                var rs = db.Query("Note").Insert(new
+                {
+                    note.NomMatiere,
+                    note.NoteMatiere,
+                    note.CoefMatiere,
+                    note.Classe.IdClasse,
+                    note.Etudiant.IdEtudiant
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Insert : " + ex.Message);
+                Console.WriteLine("Note DAO Insert : " + ex.Message);
                 return 0;
             }
         }

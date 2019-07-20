@@ -1,4 +1,5 @@
-﻿using DAO;
+﻿using ClassLibrary;
+using DAO;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,16 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            Classe c = new ClasseDAO().GetClasse(1);
-            Console.WriteLine(c);
+            /* UNDONE AnneeScolaireDAO */
+            var rs = new AnneeScolaireDAO().GetAnneeScolaires();
+            //
+            //var etudiant = new EtudiantDAO().GetEtudiant(1);
+            foreach (var item in rs)
+            {
+                Console.WriteLine(item + " " + item.Classe + " " + item.Etudiant);
+            }
             Console.ReadLine();
+
         }
     }
 }

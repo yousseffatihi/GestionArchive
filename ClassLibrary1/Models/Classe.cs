@@ -3,14 +3,24 @@ using System.Collections.Generic;
 
 namespace Models {
 	public class Classe {
+        /// <summary>
+        /// Attributes
+        /// </summary>
 		private int idClasse;
 		private string nomClasse;
 		private string niveauClasse;
+        /// <summary>
+        /// Associations
+        /// </summary>
+		private List<Note> notes;
+		private List<AnneeScolaire> anneesScolaires;
 
-		private System.Collections.Generic.List<Note> notes;
-		private System.Collections.Generic.List<AnneeScolaire> anneesScolaires;
-
-        
+        /// <summary>
+        /// Defualt Constructors
+        /// </summary>
+        /// <param name="idClasse"></param>
+        /// <param name="nomClasse"></param>
+        /// <param name="niveauClasse"></param>
         public Classe(int idClasse, string nomClasse, string niveauClasse)
         {
             this.idClasse = idClasse;
@@ -18,6 +28,14 @@ namespace Models {
             this.niveauClasse = niveauClasse;
         }
 
+        /// <summary>
+        /// This Contructor is made to initialize all attributes and associations
+        /// </summary>
+        /// <param name="idClasse"></param>
+        /// <param name="nomClasse"></param>
+        /// <param name="niveauClasse"></param>
+        /// <param name="notes"></param>
+        /// <param name="anneesScolaires"></param>
         public Classe(int idClasse, string nomClasse, string niveauClasse, List<Note> notes, List<AnneeScolaire> anneesScolaires) : this(idClasse, nomClasse, niveauClasse)
         {
             this.notes = notes;
@@ -53,7 +71,10 @@ namespace Models {
             get { return anneesScolaires; }
             set { anneesScolaires = value; }
         }
-
+        /// <summary>
+        /// ToString Function
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Id Classe : {idClasse} \t Nom Classe : {nomClasse} \t Niveau Classe : {niveauClasse}";

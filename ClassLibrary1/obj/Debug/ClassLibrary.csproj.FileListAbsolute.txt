@@ -7,3 +7,17 @@ C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\D
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\Dapper.xml
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\DESKTOP 3\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\Dapper.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\QueryBuilder.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\SqlKata.Execution.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\System.Security.Permissions.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\Dapper.xml
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.csproj.CopyComplete
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.dll
+C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.pdb

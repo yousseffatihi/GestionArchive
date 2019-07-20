@@ -1,108 +1,113 @@
-﻿using ClassLibrary;
-using Models;
-using SqlKata.Compilers;
-using SqlKata.Execution;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using ClassLibrary;
+using Models;
+using SqlKata.Compilers;
+using SqlKata.Execution;
 
 namespace DAO
 {
-    public class ClasseDAO
+    class DocumentDAO
     {
         private SqlConnection connection;
 
-        public ClasseDAO()
+        public DocumentDAO()
         {
             connection = Singleton.GetInstance().GetConnection();
         }
 
-        public Classe GetClasse(int idClasse)
+        public Document GetDocument(int idDocument)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var classe = db.Query("Classe").Where("IdClasse", idClasse).FirstOrDefault<Classe>();
-                return classe;
+                var document = db.Query("Document").Where("IdDocument", idDocument).FirstOrDefault<Document>();
+                return document;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Get Classe : " + ex.Message);
+                Console.WriteLine("Document DAO Get Document : " + ex.Message);
                 return null;
             }
         }
 
-        public IEnumerable<Classe> GetClasses()
+        public IEnumerable<Document> GetDocuments()
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var classes = db.Query("Classe").GetAsync<Classe>().GetAwaiter().GetResult();
-                if (classes.Count() == 0)
+                var documents = db.Query("Document").GetAsync<Document>().GetAwaiter().GetResult();
+                if (documents.Count() == 0)
                     return null;
-                return classes;
+                return documents;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Get Classes : " + ex.Message);
+                Console.WriteLine("Document DAO Get Documents : " + ex.Message);
                 return null;
             }
         }
 
-        public int UpdateClasse(Classe classe)
+        public int UpdateDocument(Document document)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Where("IdClasse", classe.IdClasse).Update(new {
-                    classe.NomClasse,
-                    classe.NiveauClasse,
+                var rs = db.Query("Document").Where("IdDocument", document.IdDocument).Update(new
+                {
+                    document.FichPath,
+                    document.TypeDocument,
+                    document.Etudiant.IdEtudiant
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Update : " + ex.Message);
+                Console.WriteLine("Document DAO Update : " + ex.Message);
                 return 0;
             }
         }
 
-        public int DeleteClasse(int idClasse)
+        public int DeleteDocument(int idDocument)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Where("IdClasse", idClasse).Delete();
+                var rs = db.Query("Document").Where("IdDocument", idDocument).Delete();
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Delete : " + ex.Message);
+                Console.WriteLine("Document DAO Delete : " + ex.Message);
                 return 0;
             }
         }
 
-        public int InsertClasse(Classe classe)
+        public int InsertDocument(Document document)
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var rs = db.Query("Classe").Insert(new {
-                    classe.NomClasse,
-                    classe.NiveauClasse,
+                var rs = db.Query("Document").Insert(new
+                {
+                    document.FichPath,
+                    document.TypeDocument,
+                    document.Etudiant.IdEtudiant
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Classe DAO Insert : " + ex.Message);
+                Console.WriteLine("Document DAO Insert : " + ex.Message);
                 return 0;
             }
         }
