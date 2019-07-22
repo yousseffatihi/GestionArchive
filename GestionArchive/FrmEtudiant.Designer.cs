@@ -239,6 +239,7 @@
             this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -289,6 +290,7 @@
             this.txtAddresse.Name = "txtAddresse";
             this.txtAddresse.Size = new System.Drawing.Size(158, 20);
             this.txtAddresse.TabIndex = 3;
+            this.txtAddresse.Leave += new System.EventHandler(this.txtAddresse_LeaveAsync);
             // 
             // txtLieuAr
             // 
@@ -296,6 +298,7 @@
             this.txtLieuAr.Name = "txtLieuAr";
             this.txtLieuAr.Size = new System.Drawing.Size(158, 20);
             this.txtLieuAr.TabIndex = 14;
+            this.txtLieuAr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtLieu
             // 
@@ -303,6 +306,7 @@
             this.txtLieu.Name = "txtLieu";
             this.txtLieu.Size = new System.Drawing.Size(158, 20);
             this.txtLieu.TabIndex = 4;
+            this.txtLieu.Leave += new System.EventHandler(this.txtLieu_LeaveAsync);
             // 
             // txtCNI
             // 
@@ -403,6 +407,7 @@
             this.txtAddresseAr.Name = "txtAddresseAr";
             this.txtAddresseAr.Size = new System.Drawing.Size(158, 20);
             this.txtAddresseAr.TabIndex = 13;
+            this.txtAddresseAr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPrenomAr
             // 
@@ -410,6 +415,7 @@
             this.txtPrenomAr.Name = "txtPrenomAr";
             this.txtPrenomAr.Size = new System.Drawing.Size(158, 20);
             this.txtPrenomAr.TabIndex = 12;
+            this.txtPrenomAr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPrenom
             // 
@@ -417,6 +423,7 @@
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(158, 20);
             this.txtPrenom.TabIndex = 2;
+            this.txtPrenom.Leave += new System.EventHandler(this.txtPrenom_LeaveAsync);
             // 
             // label3
             // 
@@ -442,6 +449,7 @@
             this.txtNomAr.Name = "txtNomAr";
             this.txtNomAr.Size = new System.Drawing.Size(158, 20);
             this.txtNomAr.TabIndex = 11;
+            this.txtNomAr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
@@ -458,6 +466,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(158, 20);
             this.txtNom.TabIndex = 1;
+            this.txtNom.Leave += new System.EventHandler(this.txtNom_LeaveAsync);
             // 
             // label11
             // 

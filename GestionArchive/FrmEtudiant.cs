@@ -1,4 +1,5 @@
 ﻿using DAO;
+using GoogleTranslateFreeApi;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -198,7 +199,7 @@ namespace GestionArchive
                 MessageBox.Show(this, ex.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Insertion ajouter avec succée.");
+            MessageBox.Show("L'étudiant a été modifier avec succée.");
             ClearAll();
             btnShow_Click(sender, e);
         }
@@ -248,6 +249,63 @@ namespace GestionArchive
         private void dataGridView_SelectionChanged(object sender, EventArgs e)
         {
             FillData();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var eDAO = new EtudiantDAO();
+                eDAO.DeleteEtudiant(int.Parse(dataGridView.CurrentRow.Cells[0].Value.ToString()));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Cet étudiant a des notes ou association en annee scolaire s'il vous plaît supprimer toutes les notes ou/et les annee scolaires puis supprimez l'étudiant \n" + ex.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("L'étudiant a été supptimer avec succée.");
+            ClearAll();
+            btnShow_Click(sender, e);
+            dataGridView_SelectionChanged(sender, e);
+        }
+
+        private async void txtNom_LeaveAsync(object sender, EventArgs e)
+        {
+            if(txtNomAr.Text == "")
+                await Translate(txtNom, txtNomAr);
+        }
+
+        private async Task Translate(TextBox txtSource, TextBox txtDest)
+        {
+            var translator = new GoogleTranslator();
+
+            Language from = Language.Auto;
+            Language to = GoogleTranslator.GetLanguageByISO("ar");
+
+            TranslationResult result = await translator.TranslateLiteAsync(txtSource.Text, from, to);
+
+            //You can get all text using MergedTranslation property
+            string resultMerged = result.MergedTranslation;
+
+            txtDest.Text = resultMerged;
+        }
+
+        private async void txtPrenom_LeaveAsync(object sender, EventArgs e)
+        {
+            if (txtPrenomAr.Text == "")
+                await Translate(txtPrenom, txtPrenomAr);
+        }
+
+        private async void txtAddresse_LeaveAsync(object sender, EventArgs e)
+        {
+            if (txtAddresseAr.Text == "")
+                await Translate(txtAddresse, txtAddresseAr);
+        }
+
+        private async void txtLieu_LeaveAsync(object sender, EventArgs e)
+        {
+            if (txtLieuAr.Text == "")
+                await Translate(txtLieu, txtLieuAr);
         }
     }
 }
