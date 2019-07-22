@@ -13,11 +13,19 @@ namespace DAO
     {
         private SqlConnection connection;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public EtudiantDAO()
         {
             connection = Singleton.GetInstance().GetConnection();
         }
 
+        /// <summary>
+        /// This Function return an etudiant by idEtudiant
+        /// </summary>
+        /// <param name="idEtudiant"></param>
+        /// <returns></returns>
         public Etudiant GetEtudiant(int idEtudiant)
         {
             try
@@ -34,13 +42,80 @@ namespace DAO
             }
         }
 
+        /// <summary>
+        /// This Function return an etudiant by CNI
+        /// </summary>
+        /// <param name="CNI"></param>
+        /// <returns></returns>
+        public IEnumerable<Etudiant> GetEtudiantByCNI(string CNI)
+        {
+            try
+            {
+                SqlServerCompiler compiler = new SqlServerCompiler();
+                var db = new QueryFactory(connection, compiler);
+                var etudiant = db.Query("Etudiant").Where("Cni", CNI).Get<Etudiant>();
+                return etudiant;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Etudiant DAO Get Etudiant : " + ex.Message);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// This Function return an etudiant by CNE
+        /// </summary>
+        /// <param name="CNI"></param>
+        /// <returns></returns>
+        public IEnumerable<Etudiant> GetEtudiantByCNE(string CNE)
+        {
+            try
+            {
+                SqlServerCompiler compiler = new SqlServerCompiler();
+                var db = new QueryFactory(connection, compiler);
+                var etudiant = db.Query("Etudiant").Where("Cne", CNE).Get<Etudiant>();
+                return etudiant;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Etudiant DAO Get Etudiant : " + ex.Message);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// This Function return an etudiant by Massar
+        /// </summary>
+        /// <param name="CNI"></param>
+        /// <returns></returns>
+        public IEnumerable<Etudiant> GetEtudiantByMassar(string Massar)
+        {
+            try
+            {
+                SqlServerCompiler compiler = new SqlServerCompiler();
+                var db = new QueryFactory(connection, compiler);
+                var etudiant = db.Query("Etudiant").Where("Massar", Massar).Get<Etudiant>();
+                return etudiant;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Etudiant DAO Get Etudiant : " + ex.Message);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// This Function return all Etudiants
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Etudiant> GetEtudiants()
         {
             try
             {
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
-                var etudiants = db.Query("Etudiant").GetAsync<Etudiant>().GetAwaiter().GetResult();
+                var etudiants = db.Query("Etudiant").Get<Etudiant>();
                 if (etudiants.Count() == 0)
                     return null;
                 return etudiants;
@@ -52,7 +127,12 @@ namespace DAO
             }
         }
 
-        public int UpdateEtudiant(Etudiant etudiant)
+        /// <summary>
+        /// This function returns the number of lines are affected by update statement
+        /// </summary>
+        /// <param name="etudiant"></param>
+        /// <returns></returns>
+        public int UpdateEtudiant(Etudiant etudiant) 
         {
             try
             {
@@ -70,7 +150,7 @@ namespace DAO
                     etudiant.DateDeNaissance,
                     etudiant.DateInscription,
                     etudiant.LieuDeNaissance,
-                    etudiant.LienDeNaissanceArabe,
+                    etudiant.LieuDeNaissanceArabe,
                     etudiant.Adresse,
                     etudiant.AdresseArabe,
                     etudiant.NumInsricption
@@ -80,10 +160,15 @@ namespace DAO
             catch (Exception ex)
             {
                 Console.WriteLine("Etudiant DAO Update : " + ex.Message);
-                return 0;
+                throw new Exception(ex.Message);
             }
         }
 
+        /// <summary>
+        /// This function returns the number of lines are affected by delete statement
+        /// </summary>
+        /// <param name="idEtudiant"></param>
+        /// <returns></returns>
         public int DeleteEtudiant(int idEtudiant)
         {
             try
@@ -96,10 +181,15 @@ namespace DAO
             catch (Exception ex)
             {
                 Console.WriteLine("Etudiant DAO Delete : " + ex.Message);
-                return 0;
+                throw new Exception(ex.Message);
             }
         }
 
+        /// <summary>
+        /// This function returns the number of lines are affected by insert statement
+        /// </summary>
+        /// <param name="etudiant"></param>
+        /// <returns></returns>
         public int InsertEtudiant(Etudiant etudiant)
         {
             try
@@ -118,7 +208,7 @@ namespace DAO
                     etudiant.DateDeNaissance,
                     etudiant.DateInscription,
                     etudiant.LieuDeNaissance,
-                    etudiant.LienDeNaissanceArabe,
+                    etudiant.LieuDeNaissanceArabe,
                     etudiant.Adresse,
                     etudiant.AdresseArabe,
                     etudiant.NumInsricption
@@ -128,7 +218,7 @@ namespace DAO
             catch (Exception ex)
             {
                 Console.WriteLine("Etudiant DAO Insert : " + ex.Message);
-                return 0;
+                throw new Exception(ex.Message);
             }
         }
     }

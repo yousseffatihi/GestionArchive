@@ -26,3 +26,6 @@ C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\Gesti
 C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb
 C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\ClassLibrary.dll
 C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\ClassLibrary.pdb
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\bin\Debug\MetroFramework.dll
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.Form1.resources
+C:\Users\Creative\Source\Repos\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.FrmEtudiant.resources

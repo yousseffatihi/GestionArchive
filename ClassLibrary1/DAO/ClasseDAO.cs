@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 using Models;
+using SqlKata;
 using SqlKata.Compilers;
 using SqlKata.Execution;
 using System;
@@ -42,6 +43,26 @@ namespace DAO
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
                 var classes = db.Query("Classe").GetAsync<Classe>().GetAwaiter().GetResult();
+                if (classes.Count() == 0)
+                    return null;
+                return classes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Classe DAO Get Classes : " + ex.Message);
+                return null;
+            }
+        }
+
+        public IEnumerable<Classe> GetClassesByEtudiant(int IdEtudiant)
+        {
+            try
+            {
+                SqlServerCompiler compiler = new SqlServerCompiler();
+                var db = new QueryFactory(connection, compiler);
+                var classes = db.Query("AnneeScolaire").Join("Etudiant", "AnneeScolaire.IdEtudiant", "Etudiant.IdEtudiant")
+                    .Join("Classe", "AnneeScolaire.IdClasse", "Classe.IdClasse")
+                    .Where("Etudiant.IdEtudiant", IdEtudiant).Select("Classe.IdClasse", "Classe.NomClasse", "Classe.NiveauClasse").Get<Classe>();
                 if (classes.Count() == 0)
                     return null;
                 return classes;

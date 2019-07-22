@@ -164,7 +164,7 @@ namespace Models {
             set { lieuDeNaissance = value; }
         }
 
-        public string LienDeNaissanceArabe
+        public string LieuDeNaissanceArabe
         {
             get { return lieuDeNaissanceArabe; }
             set { lieuDeNaissanceArabe = value; }
@@ -204,6 +204,11 @@ namespace Models {
         {
             get { return documents; }
             set { documents = value; }
+        }
+
+        public string FullName
+        {
+            get { return NomEtudiant + " " + PrenomEtudiant; }
         }
 
         public override string ToString()

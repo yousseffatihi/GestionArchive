@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ConstantClasses\Matieres.cs" />
     <Compile Include="DAO\AnneeScolaireDAO.cs" />
     <Compile Include="DAO\ClasseDAO.cs" />
     <Compile Include="DAO\DocumentDAO.cs" />

@@ -28,6 +28,10 @@ namespace DAO
                 SqlServerCompiler compiler = new SqlServerCompiler();
                 var db = new QueryFactory(connection, compiler);
                 var note = db.Query("Note").Where("IdNote", idNote).FirstOrDefault<Note>();
+                var IdClasse = db.Query("Note").Where("IdNote", idNote).Select("IdClasse").FirstOrDefault<Int32>();
+                note.Classe = new ClasseDAO().GetClasse(IdClasse);
+                var IdEtudiant = db.Query("Note").Where("IdNote", idNote).Select("IdEtudiant").FirstOrDefault<Int32>();
+                note.Etudiant = new EtudiantDAO().GetEtudiant(IdEtudiant);   
                 return note;
             }
             catch (Exception ex)
@@ -46,6 +50,13 @@ namespace DAO
                 var notes = db.Query("Note").GetAsync<Note>().GetAwaiter().GetResult();
                 if (notes.Count() == 0)
                     return null;
+                for (int i = 0; i < notes.Count(); i++)
+                {
+                    var IdClasse = db.Query("Note").Where("IdNote", notes.ElementAt(i).IdNote).Select("IdClasse").FirstOrDefault<Int32>();
+                    notes.ElementAt(i).Classe = new ClasseDAO().GetClasse(IdClasse);
+                    var IdEtudiant = db.Query("Note").Where("IdNote", notes.ElementAt(i).IdNote).Select("IdEtudiant").FirstOrDefault<Int32>();
+                    notes.ElementAt(i).Etudiant = new EtudiantDAO().GetEtudiant(IdEtudiant);
+                }
                 return notes;
             }
             catch (Exception ex)

@@ -22,7 +22,6 @@ namespace ConsoleApplication
                 Console.WriteLine(item + " " + item.Classe + " " + item.Etudiant);
             }
             Console.ReadLine();
-
         }
     }
 }
