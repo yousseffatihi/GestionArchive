@@ -8,6 +8,7 @@ namespace Models {
 		private string nomMatiere;
 		private double noteMatiere;
 		private int coefMatiere;
+        private string semestre;
 
         /// <summary>
         /// Associations
@@ -22,12 +23,13 @@ namespace Models {
         /// <param name="nomMatiere"></param>
         /// <param name="noteMatiere"></param>
         /// <param name="coefMatiere"></param>
-        public Note(int idNote, string nomMatiere, double noteMatiere, int coefMatiere)
+        public Note(int idNote, string nomMatiere, double noteMatiere, int coefMatiere, string semestre)
         {
             this.idNote = idNote;
             this.nomMatiere = nomMatiere;
             this.noteMatiere = noteMatiere;
             this.coefMatiere = coefMatiere;
+            this.semestre = semestre;
         }
 
         /// <summary>
@@ -39,7 +41,8 @@ namespace Models {
         /// <param name="coefMatiere"></param>
         /// <param name="classe"></param>
         /// <param name="etudiant"></param>
-        public Note(int idNote, string nomMatiere, double noteMatiere, int coefMatiere, Classe classe, Etudiant etudiant) : this(idNote, nomMatiere, noteMatiere, coefMatiere)
+        public Note(int idNote, string nomMatiere, double noteMatiere, int coefMatiere, string semestre, Classe classe, Etudiant etudiant) 
+            : this(idNote, nomMatiere, noteMatiere, coefMatiere, semestre)
         {
             this.classe = classe;
             this.etudiant = etudiant;
@@ -80,6 +83,8 @@ namespace Models {
             get { return etudiant; }
             set { etudiant = value; }
         }
+
+        public string Semestre { get => semestre; set => semestre = value; }
 
         /// <summary>
         /// ToString Function

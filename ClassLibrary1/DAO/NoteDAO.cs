@@ -36,8 +36,7 @@ namespace DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Note DAO Get Note : " + ex.Message);
-                return null;
+                throw ex;
             }
         }
 
@@ -61,8 +60,7 @@ namespace DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Note DAO Get Notes : " + ex.Message);
-                return null;
+                throw ex;
             }
         }
 
@@ -78,14 +76,14 @@ namespace DAO
                     note.NoteMatiere,
                     note.CoefMatiere,
                     note.Classe.IdClasse,
-                    note.Etudiant.IdEtudiant
+                    note.Etudiant.IdEtudiant,
+                    note.Semestre
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Note DAO Update : " + ex.Message);
-                return 0;
+                throw ex;
             }
         }
 
@@ -100,8 +98,7 @@ namespace DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Note DAO Delete : " + ex.Message);
-                return 0;
+                throw ex;
             }
         }
 
@@ -117,14 +114,14 @@ namespace DAO
                     note.NoteMatiere,
                     note.CoefMatiere,
                     note.Classe.IdClasse,
-                    note.Etudiant.IdEtudiant
+                    note.Etudiant.IdEtudiant,
+                    note.Semestre
                 });
                 return rs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Note DAO Insert : " + ex.Message);
-                return 0;
+                throw ex;
             }
         }
     }

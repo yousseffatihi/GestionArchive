@@ -32,30 +32,33 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.lbCoef = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbMatiere = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbClasse = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnFind = new System.Windows.Forms.Button();
+            this.LbMassar = new System.Windows.Forms.Label();
+            this.LbCne = new System.Windows.Forms.Label();
+            this.LbPrenom = new System.Windows.Forms.Label();
+            this.LbNom = new System.Windows.Forms.Label();
             this.cbEtudiant = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rdSemestreOne = new System.Windows.Forms.RadioButton();
+            this.rdSemestreTwo = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -99,8 +102,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.lbCoef);
-            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.rdSemestreTwo);
+            this.groupBox5.Controls.Add(this.rdSemestreOne);
             this.groupBox5.Controls.Add(this.cbMatiere);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(631, 3);
@@ -109,23 +112,6 @@
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Nom Matiere";
-            // 
-            // lbCoef
-            // 
-            this.lbCoef.AutoSize = true;
-            this.lbCoef.Location = new System.Drawing.Point(50, 53);
-            this.lbCoef.Name = "lbCoef";
-            this.lbCoef.Size = new System.Drawing.Size(0, 13);
-            this.lbCoef.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Coef : ";
             // 
             // cbMatiere
             // 
@@ -175,10 +161,14 @@
             this.cbClasse.Name = "cbClasse";
             this.cbClasse.Size = new System.Drawing.Size(302, 21);
             this.cbClasse.TabIndex = 0;
+            this.cbClasse.SelectedIndexChanged += new System.EventHandler(this.cbClasse_SelectedIndexChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnFind);
+            this.groupBox3.Controls.Add(this.LbMassar);
+            this.groupBox3.Controls.Add(this.LbCne);
+            this.groupBox3.Controls.Add(this.LbPrenom);
+            this.groupBox3.Controls.Add(this.LbNom);
             this.groupBox3.Controls.Add(this.cbEtudiant);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
@@ -188,25 +178,61 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Etudiant";
             // 
-            // btnFind
+            // LbMassar
             // 
-            this.btnFind.Location = new System.Drawing.Point(6, 43);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
-            this.btnFind.TabIndex = 1;
-            this.btnFind.Text = "Recherche";
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.LbMassar.AutoSize = true;
+            this.LbMassar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LbMassar.Location = new System.Drawing.Point(3, 106);
+            this.LbMassar.Name = "LbMassar";
+            this.LbMassar.Padding = new System.Windows.Forms.Padding(5);
+            this.LbMassar.Size = new System.Drawing.Size(57, 23);
+            this.LbMassar.TabIndex = 2;
+            this.LbMassar.Text = "Massar :";
+            // 
+            // LbCne
+            // 
+            this.LbCne.AutoSize = true;
+            this.LbCne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LbCne.Location = new System.Drawing.Point(3, 83);
+            this.LbCne.Name = "LbCne";
+            this.LbCne.Padding = new System.Windows.Forms.Padding(5);
+            this.LbCne.Size = new System.Drawing.Size(42, 23);
+            this.LbCne.TabIndex = 2;
+            this.LbCne.Text = "Cne :";
+            // 
+            // LbPrenom
+            // 
+            this.LbPrenom.AutoSize = true;
+            this.LbPrenom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LbPrenom.Location = new System.Drawing.Point(3, 60);
+            this.LbPrenom.Name = "LbPrenom";
+            this.LbPrenom.Padding = new System.Windows.Forms.Padding(5);
+            this.LbPrenom.Size = new System.Drawing.Size(59, 23);
+            this.LbPrenom.TabIndex = 2;
+            this.LbPrenom.Text = "Prenom :";
+            // 
+            // LbNom
+            // 
+            this.LbNom.AutoSize = true;
+            this.LbNom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LbNom.Location = new System.Drawing.Point(3, 37);
+            this.LbNom.Name = "LbNom";
+            this.LbNom.Padding = new System.Windows.Forms.Padding(5);
+            this.LbNom.Size = new System.Drawing.Size(45, 23);
+            this.LbNom.TabIndex = 2;
+            this.LbNom.Text = "Nom :";
             // 
             // cbEtudiant
             // 
             this.cbEtudiant.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbEtudiant.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbEtudiant.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbEtudiant.FormattingEnabled = true;
             this.cbEtudiant.Location = new System.Drawing.Point(3, 16);
             this.cbEtudiant.Name = "cbEtudiant";
             this.cbEtudiant.Size = new System.Drawing.Size(302, 21);
             this.cbEtudiant.TabIndex = 0;
-            this.cbEtudiant.SelectedIndexChanged += new System.EventHandler(this.cbEtudiant_SelectedIndexChanged);
+            this.cbEtudiant.SelectedIndexChanged += new System.EventHandler(this.cbEtudiant_SelectedIndexChangedAsync);
             // 
             // btnAdd
             // 
@@ -249,10 +275,6 @@
             this.btnShow.Text = "Afficher les notes d\'étudiant";
             this.btnShow.UseVisualStyleBackColor = true;
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -261,6 +283,36 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(1258, 450);
             this.dataGridView.TabIndex = 2;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // rdSemestreOne
+            // 
+            this.rdSemestreOne.AutoSize = true;
+            this.rdSemestreOne.Checked = true;
+            this.rdSemestreOne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rdSemestreOne.Location = new System.Drawing.Point(3, 37);
+            this.rdSemestreOne.Name = "rdSemestreOne";
+            this.rdSemestreOne.Padding = new System.Windows.Forms.Padding(5);
+            this.rdSemestreOne.Size = new System.Drawing.Size(302, 27);
+            this.rdSemestreOne.TabIndex = 1;
+            this.rdSemestreOne.TabStop = true;
+            this.rdSemestreOne.Text = "1ere Semestre";
+            this.rdSemestreOne.UseVisualStyleBackColor = true;
+            // 
+            // rdSemestreTwo
+            // 
+            this.rdSemestreTwo.AutoSize = true;
+            this.rdSemestreTwo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rdSemestreTwo.Location = new System.Drawing.Point(3, 64);
+            this.rdSemestreTwo.Name = "rdSemestreTwo";
+            this.rdSemestreTwo.Padding = new System.Windows.Forms.Padding(5);
+            this.rdSemestreTwo.Size = new System.Drawing.Size(302, 27);
+            this.rdSemestreTwo.TabIndex = 2;
+            this.rdSemestreTwo.Text = "2eme Semstre";
+            this.rdSemestreTwo.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -279,8 +331,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,15 +343,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label lbCoef;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbMatiere;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbClasse;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.ComboBox cbEtudiant;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
@@ -306,6 +356,12 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Label LbMassar;
+        private System.Windows.Forms.Label LbCne;
+        private System.Windows.Forms.Label LbPrenom;
+        private System.Windows.Forms.Label LbNom;
+        private System.Windows.Forms.RadioButton rdSemestreTwo;
+        private System.Windows.Forms.RadioButton rdSemestreOne;
     }
 }
 
