@@ -31,11 +31,11 @@ INNER JOIN Classe c on c.IdClasse = a.IdClasse WHERE e.IdEtudiant = 2
         {
             try
             {
-
+                double result = 0.0;
                 if (txtNote.Text == "")
                     return;
 
-                bool isDouble = double.TryParse(txtNote.Text, out double mark);
+                bool isDouble = double.TryParse(txtNote.Text, out result);
 
                 if (!isDouble)
                     return;

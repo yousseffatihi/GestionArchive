@@ -22,3 +22,15 @@ C:\Users\Creative\Source\Repos\GestionArchive\ConsoleApplication\obj\Debug\Conso
 C:\Users\Creative\Source\Repos\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
 C:\Users\Creative\Source\Repos\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary.dll
 C:\Users\Creative\Source\Repos\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\QueryBuilder.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\SqlKata.Execution.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\Dapper.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\ClassLibrary.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\bin\Debug\Dapper.xml
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ConsoleApplication\obj\Debug\ConsoleApplication.pdb

@@ -21,3 +21,15 @@ C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\ClassLibra
 C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary.pdb
 C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.dll
 C:\Users\Creative\Source\Repos\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\ClassLibrary.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\Dapper.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\QueryBuilder.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\SqlKata.Execution.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\System.Security.AccessControl.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\System.Security.Permissions.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\bin\Debug\Dapper.xml
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\ClassLibrary1\obj\Debug\ClassLibrary.pdb

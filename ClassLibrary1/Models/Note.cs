@@ -84,7 +84,18 @@ namespace Models {
             set { etudiant = value; }
         }
 
-        public string Semestre { get => semestre; set => semestre = value; }
+        public string Semestre
+        {
+            get
+            {
+                return this.semestre;
+            }
+
+            set
+            {
+                this.semestre = value;
+            }
+        }
 
         /// <summary>
         /// ToString Function
