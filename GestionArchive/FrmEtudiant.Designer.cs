@@ -71,6 +71,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnCLear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.grbFrançais.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,6 +97,7 @@
             // grbFrançais
             // 
             this.grbFrançais.Controls.Add(this.groupBox1);
+            this.grbFrançais.Controls.Add(this.btnCLear);
             this.grbFrançais.Controls.Add(this.btnShow);
             this.grbFrançais.Controls.Add(this.btnDelete);
             this.grbFrançais.Controls.Add(this.btnEdit);
@@ -146,32 +148,36 @@
             this.groupBox1.Controls.Add(this.txtRdCNE);
             this.groupBox1.Controls.Add(this.btnFind);
             this.groupBox1.Controls.Add(this.txtRdCNI);
-            this.groupBox1.Location = new System.Drawing.Point(555, 19);
+            this.groupBox1.Location = new System.Drawing.Point(642, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(261, 170);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.Size = new System.Drawing.Size(299, 170);
+            this.groupBox1.TabIndex = 99;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rechercher";
             // 
             // rdMassar
             // 
             this.rdMassar.AutoSize = true;
-            this.rdMassar.Location = new System.Drawing.Point(6, 84);
+            this.rdMassar.Location = new System.Drawing.Point(9, 79);
             this.rdMassar.Name = "rdMassar";
-            this.rdMassar.Size = new System.Drawing.Size(76, 17);
-            this.rdMassar.TabIndex = 5;
-            this.rdMassar.Text = "MASSAR :";
+            this.rdMassar.Padding = new System.Windows.Forms.Padding(5);
+            this.rdMassar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdMassar.Size = new System.Drawing.Size(80, 27);
+            this.rdMassar.TabIndex = 24;
+            this.rdMassar.Text = "MASSAR";
             this.rdMassar.UseVisualStyleBackColor = true;
             this.rdMassar.CheckedChanged += new System.EventHandler(this.rdMassar_CheckedChanged);
             // 
             // rdCNE
             // 
             this.rdCNE.AutoSize = true;
-            this.rdCNE.Location = new System.Drawing.Point(26, 58);
+            this.rdCNE.Location = new System.Drawing.Point(29, 54);
             this.rdCNE.Name = "rdCNE";
-            this.rdCNE.Size = new System.Drawing.Size(56, 17);
-            this.rdCNE.TabIndex = 5;
-            this.rdCNE.Text = "CNE : ";
+            this.rdCNE.Padding = new System.Windows.Forms.Padding(5);
+            this.rdCNE.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdCNE.Size = new System.Drawing.Size(60, 27);
+            this.rdCNE.TabIndex = 22;
+            this.rdCNE.Text = "CNE ";
             this.rdCNE.UseVisualStyleBackColor = true;
             this.rdCNE.CheckedChanged += new System.EventHandler(this.rdCNE_CheckedChanged);
             // 
@@ -179,54 +185,56 @@
             // 
             this.rdCNI.AutoSize = true;
             this.rdCNI.Checked = true;
-            this.rdCNI.Location = new System.Drawing.Point(33, 33);
+            this.rdCNI.Location = new System.Drawing.Point(33, 28);
             this.rdCNI.Name = "rdCNI";
-            this.rdCNI.Size = new System.Drawing.Size(49, 17);
-            this.rdCNI.TabIndex = 5;
+            this.rdCNI.Padding = new System.Windows.Forms.Padding(5);
+            this.rdCNI.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdCNI.Size = new System.Drawing.Size(56, 27);
+            this.rdCNI.TabIndex = 20;
             this.rdCNI.TabStop = true;
-            this.rdCNI.Text = "CNI :";
+            this.rdCNI.Text = "CNI ";
             this.rdCNI.UseVisualStyleBackColor = true;
             this.rdCNI.CheckedChanged += new System.EventHandler(this.rdCNI_CheckedChanged);
             // 
             // txtRdMassar
             // 
             this.txtRdMassar.Enabled = false;
-            this.txtRdMassar.Location = new System.Drawing.Point(82, 83);
+            this.txtRdMassar.Location = new System.Drawing.Point(98, 83);
             this.txtRdMassar.Name = "txtRdMassar";
             this.txtRdMassar.Size = new System.Drawing.Size(158, 20);
-            this.txtRdMassar.TabIndex = 18;
+            this.txtRdMassar.TabIndex = 25;
             // 
             // txtRdCNE
             // 
             this.txtRdCNE.Enabled = false;
-            this.txtRdCNE.Location = new System.Drawing.Point(82, 58);
+            this.txtRdCNE.Location = new System.Drawing.Point(98, 58);
             this.txtRdCNE.Name = "txtRdCNE";
             this.txtRdCNE.Size = new System.Drawing.Size(158, 20);
-            this.txtRdCNE.TabIndex = 17;
+            this.txtRdCNE.TabIndex = 23;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(82, 109);
+            this.btnFind.Location = new System.Drawing.Point(98, 109);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(158, 46);
-            this.btnFind.TabIndex = 23;
+            this.btnFind.TabIndex = 26;
             this.btnFind.Text = "Rechercher";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtRdCNI
             // 
-            this.txtRdCNI.Location = new System.Drawing.Point(82, 32);
+            this.txtRdCNI.Location = new System.Drawing.Point(98, 32);
             this.txtRdCNI.Name = "txtRdCNI";
             this.txtRdCNI.Size = new System.Drawing.Size(158, 20);
-            this.txtRdCNI.TabIndex = 16;
+            this.txtRdCNI.TabIndex = 21;
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(472, 236);
+            this.btnShow.Location = new System.Drawing.Point(467, 132);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(158, 46);
-            this.btnShow.TabIndex = 22;
+            this.btnShow.TabIndex = 18;
             this.btnShow.Text = "Afficher Tous";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
@@ -236,7 +244,7 @@
             this.btnDelete.Location = new System.Drawing.Point(303, 236);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(158, 46);
-            this.btnDelete.TabIndex = 21;
+            this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Supprimer";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -246,7 +254,7 @@
             this.btnEdit.Location = new System.Drawing.Point(303, 184);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(158, 46);
-            this.btnEdit.TabIndex = 20;
+            this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "Modifier";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -256,7 +264,7 @@
             this.btnAdd.Location = new System.Drawing.Point(303, 132);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(158, 46);
-            this.btnAdd.TabIndex = 19;
+            this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Ajouter";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -509,6 +517,16 @@
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
             // 
+            // btnCLear
+            // 
+            this.btnCLear.Location = new System.Drawing.Point(467, 184);
+            this.btnCLear.Name = "btnCLear";
+            this.btnCLear.Size = new System.Drawing.Size(158, 46);
+            this.btnCLear.TabIndex = 19;
+            this.btnCLear.Text = "Clear";
+            this.btnCLear.UseVisualStyleBackColor = true;
+            this.btnCLear.Click += new System.EventHandler(this.btnCLear_Click);
+            // 
             // FrmEtudiant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,5 +592,6 @@
         private System.Windows.Forms.TextBox txtRdCNI;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnCLear;
     }
 }

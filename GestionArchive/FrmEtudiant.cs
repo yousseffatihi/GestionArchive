@@ -271,7 +271,7 @@ namespace GestionArchive
 
         private async void txtNom_LeaveAsync(object sender, EventArgs e)
         {
-            if(txtNomAr.Text == "")
+            if(txtNomAr.Text == "" && txtNom.Text != "")
                 await Translate(txtNom, txtNomAr);
         }
 
@@ -292,20 +292,25 @@ namespace GestionArchive
 
         private async void txtPrenom_LeaveAsync(object sender, EventArgs e)
         {
-            if (txtPrenomAr.Text == "")
+            if (txtPrenomAr.Text == "" && txtPrenom.Text != "")
                 await Translate(txtPrenom, txtPrenomAr);
         }
 
         private async void txtAddresse_LeaveAsync(object sender, EventArgs e)
         {
-            if (txtAddresseAr.Text == "")
+            if (txtAddresseAr.Text == "" && txtAddresse.Text != "")
                 await Translate(txtAddresse, txtAddresseAr);
         }
 
         private async void txtLieu_LeaveAsync(object sender, EventArgs e)
         {
-            if (txtLieuAr.Text == "")
+            if (txtLieuAr.Text == "" && txtLieu.Text != "")
                 await Translate(txtLieu, txtLieuAr);
+        }
+
+        private void btnCLear_Click(object sender, EventArgs e)
+        {
+            ClearAll();
         }
     }
 }
