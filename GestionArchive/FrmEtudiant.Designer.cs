@@ -38,6 +38,7 @@
             this.txtRdCNE = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.txtRdCNI = new System.Windows.Forms.TextBox();
+            this.btnCLear = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnCLear = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.grbFrançais.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,6 +98,7 @@
             // grbFrançais
             // 
             this.grbFrançais.Controls.Add(this.groupBox1);
+            this.grbFrançais.Controls.Add(this.btnPrint);
             this.grbFrançais.Controls.Add(this.btnCLear);
             this.grbFrançais.Controls.Add(this.btnShow);
             this.grbFrançais.Controls.Add(this.btnDelete);
@@ -228,6 +230,16 @@
             this.txtRdCNI.Name = "txtRdCNI";
             this.txtRdCNI.Size = new System.Drawing.Size(158, 20);
             this.txtRdCNI.TabIndex = 21;
+            // 
+            // btnCLear
+            // 
+            this.btnCLear.Location = new System.Drawing.Point(467, 184);
+            this.btnCLear.Name = "btnCLear";
+            this.btnCLear.Size = new System.Drawing.Size(158, 46);
+            this.btnCLear.TabIndex = 19;
+            this.btnCLear.Text = "Clear";
+            this.btnCLear.UseVisualStyleBackColor = true;
+            this.btnCLear.Click += new System.EventHandler(this.btnCLear_Click);
             // 
             // btnShow
             // 
@@ -517,15 +529,15 @@
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
             // 
-            // btnCLear
+            // btnPrint
             // 
-            this.btnCLear.Location = new System.Drawing.Point(467, 184);
-            this.btnCLear.Name = "btnCLear";
-            this.btnCLear.Size = new System.Drawing.Size(158, 46);
-            this.btnCLear.TabIndex = 19;
-            this.btnCLear.Text = "Clear";
-            this.btnCLear.UseVisualStyleBackColor = true;
-            this.btnCLear.Click += new System.EventHandler(this.btnCLear_Click);
+            this.btnPrint.Location = new System.Drawing.Point(467, 236);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(158, 46);
+            this.btnPrint.TabIndex = 19;
+            this.btnPrint.Text = "Imprimer";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // FrmEtudiant
             // 
@@ -593,5 +605,6 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnCLear;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

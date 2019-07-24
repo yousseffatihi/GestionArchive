@@ -89,3 +89,5 @@ C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Deb
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\Dapper.xml
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.exe
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\IronPdf.dll
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\IronPdf.xml

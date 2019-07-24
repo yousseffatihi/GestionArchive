@@ -312,5 +312,16 @@ namespace GestionArchive
         {
             ClearAll();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
+            // Render an HTML document or snippet as a string
+            Renderer.RenderHtmlAsPdf("<h1>Hello World</h1>").SaveAs("html-string.pdf");
+            // Advanced: 
+            // Set a "base url" or file path so that images, javascript and CSS can be loaded  
+            var PDF = Renderer.RenderHtmlAsPdf("<img src='icons/iron.png'>", @"C:\site\assets\");
+            PDF.SaveAs("html-with-assets.pdf");
+        }
     }
 }
