@@ -91,3 +91,6 @@ C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\obj\x86\Debug\GestionArchive.pdb
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\IronPdf.dll
 C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\IronPdf.xml
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\Pages\Attestation.html
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\Pages\image001.png
+C:\Users\SERVER\Source\Repos\yousseffatihi\GestionArchive\GestionArchive\bin\Debug\Pages\image003.png

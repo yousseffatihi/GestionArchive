@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -313,15 +314,32 @@ namespace GestionArchive
             ClearAll();
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private async void btnPrint_Click(object sender, EventArgs e)
         {
+            var newDate = new DateTime().ToLocalTime();
             IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
-            // Render an HTML document or snippet as a string
-            Renderer.RenderHtmlAsPdf("<h1>Hello World</h1>").SaveAs("html-string.pdf");
-            // Advanced: 
-            // Set a "base url" or file path so that images, javascript and CSS can be loaded  
-            var PDF = Renderer.RenderHtmlAsPdf("<img src='icons/iron.png'>", @"C:\site\assets\");
-            PDF.SaveAs("html-with-assets.pdf");
+            StreamReader sr = new StreamReader(@"Pages\Attestation.html");
+            var htmlDoc = await sr.ReadToEndAsync();
+            htmlDoc = htmlDoc.Replace("@FullArabicName", txtNomAr.Text + " " + txtPrenomAr.Text)
+                .Replace("@FullName", txtNom.Text + " " + txtPrenom.Text)
+                .Replace("@Date", newDate.ToShortDateString())
+                .Replace("@Naiss", dtNaissance.Value.ToShortDateString())
+                .Replace("@CNE", txtCNE.Text)
+                .Replace("@NumAttestation", txtNumInscription.Text + "/" + dtInscription.Value.ToShortDateString());
+            sr.Close();
+            StreamWriter sw = new StreamWriter(@"Pages\Attestation2.html", false);
+            foreach (var item in htmlDoc)
+            {
+                sw.Write(item);
+            }
+            sw.Close();
+            var PDF = Renderer.RenderHTMLFileAsPdf(@"Pages\Attestation2.html");
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                var filename = sfd.FileName;
+                PDF.SaveAs(Path.GetFullPath(filename));
+            }
         }
     }
 }
